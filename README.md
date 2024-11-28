@@ -7,7 +7,7 @@
 本实现基于以下论文：
 Z. Tan, A. Yu, H. Zhong, X. Zhang, Q. Xia and C. Kang, "Optimal Virtual Battery Model for Aggregating Storage-Like Resources with Network Constraints," in CSEE Journal of Power and Energy Systems, vol. 10, no. 4, pp. 1843-1847, July 2024, doi: 10.17775/CSEEJPES.2022.04090.
 
-## 数学模型
+## 数学模型（不一定准确，请参考原文）
 
 ### 主要变量
 - θ = (PB_C, PB_D, E_C, E_D): 虚拟电池参数
@@ -30,9 +30,9 @@ max η'θ
 
 2. 负荷可行性约束：
 ```
-Cx ≤ c   (运行约束)
-Dx = d   (平衡约束)
-Gx ≤ g   (网络约束)
+Cx ≤ c   (负荷不等式约束)
+Dx = d   (负荷等式约束)
+Gx ≤ g   (虚拟储能约束，用来近似上面两个约束，G和g就是我们要求的量)
 ```
 
 ### Benders 分解算法
